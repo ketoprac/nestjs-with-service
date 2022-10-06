@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Regions } from '../../models/Regions';
+import { Regions } from '../models/Regions';
 
 @Injectable()
 export class TasksService {

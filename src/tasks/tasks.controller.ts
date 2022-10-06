@@ -10,7 +10,7 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
-import { TasksService } from './../services/tasks.service';
+import { TasksService } from './tasks.service';
 @Controller('api/region')
 export class TasksController {
   constructor(private taskService: TasksService) {}

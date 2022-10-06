@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { TasksService } from './services/tasks.service';
-import { TasksController } from './controllers/tasks.controller';
+import { TasksService } from './tasks.service';
+import { TasksController } from './tasks.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Regions } from '../models/Regions';
 import { Countries } from '../models/Countries';
