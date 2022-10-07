@@ -10,24 +10,24 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
-import { TasksService } from './tasks.service';
+import { RegionsService } from './regions.service';
 @Controller('api/region')
-export class TasksController {
-  constructor(private taskService: TasksService) {}
+export class RegionsController {
+  constructor(private regionService: RegionsService) {}
   @Get()
   public async getAll() {
-    return await this.taskService.findAll();
+    return await this.regionService.findAll();
   }
 
   @Get(':id')
   public async getOne(@Param('id') id: number) {
-    return await this.taskService.findOne(id);
+    return await this.regionService.findOne(id);
   }
 
   @Post()
   @UseInterceptors(FileFieldsInterceptor([{ name: 'foto' }, { name: 'file' }]))
   public async create(@UploadedFiles() file: any, @Body() fields: any) {
-    return this.taskService.create(file, fields);
+    return this.regionService.create(file, fields);
   }
 
   @Put(':id')
@@ -37,11 +37,11 @@ export class TasksController {
     @UploadedFiles() file: any,
     @Body() fields: any,
   ) {
-    return this.taskService.update(id, file, fields);
+    return this.regionService.update(id, file, fields);
   }
 
   @Delete(':id')
   public async delete(@Param('id') id: number) {
-    return this.taskService.delete(id);
+    return this.regionService.delete(id);
   }
 }

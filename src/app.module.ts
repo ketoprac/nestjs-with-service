@@ -11,12 +11,12 @@ import { EmployeesModule } from './employees/employees.module';
 import { JobHistoryModule } from './jobhistories/jobhistory.module';
 import { JobsModule } from './jobs/jobs.module';
 import { LocationsModule } from './locations/locations.module';
-import { TasksModule } from './tasks/tasks.module';
+import { RegionsModule } from './regions/regions.module';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot(configService.getTypeOrmConfig()),
-    TasksModule,
+    RegionsModule,
     CountriesModule,
     DepartmentsModule,
     JobsModule,

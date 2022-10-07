@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { TasksService } from './tasks.service';
-import { TasksController } from './tasks.controller';
+import { RegionsService } from './regions.service';
+import { RegionsController } from './regions.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Regions } from '../models/Regions';
 import { Countries } from '../models/Countries';
@@ -11,7 +11,7 @@ import { ConfigMulter } from '../middleware/multer.config';
     TypeOrmModule.forFeature([Regions, Countries]),
     MulterModule.register(ConfigMulter.UploadFiles()),
   ],
-  providers: [TasksService],
-  controllers: [TasksController],
+  providers: [RegionsService],
+  controllers: [RegionsController],
 })
-export class TasksModule {}
+export class RegionsModule {}
