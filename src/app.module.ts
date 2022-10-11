@@ -11,12 +11,12 @@ import { ServerModule } from './server/server.module';
       port: 5432,
       username: 'postgres',
       password: 'admin',
-      database: 'HR',
+      database: 'Batch18',
       entities: ['src/entities/*{.ts,.js}'],
       synchronize: false,
     }),
     ServerModule,
-    AuthModule
+    AuthModule,
   ],
   controllers: [AppController],
 })
